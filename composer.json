@@ -1,6 +1,6 @@
 {
     "name": "kenoristic/pagination",
-    "description": "This is a pagination library",
+    "description": "This is a simple and easy to use pagination library, it can help you determine the total-pages, records-per-current-page e.tc check it out",
     "type": "library",
     "minimum-stability": "dev",
     "require": {},
