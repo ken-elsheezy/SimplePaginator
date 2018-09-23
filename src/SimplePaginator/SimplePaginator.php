@@ -11,8 +11,9 @@ class SimplePaginator implements SimplePaginatorInterface{
     private $contentsPerPage;
 
     public function __construct($totalRecords, $currentPage = 1, $contentsPerPage){
+
         $this->totalRecords = $totalRecords;
-        $this->currentPage = $currentPage;
+        $this->currentPage =  $currentPage;
         $this->contentsPerPage = $contentsPerPage;
     }
 
@@ -38,6 +39,10 @@ class SimplePaginator implements SimplePaginatorInterface{
             return $this->totalRecords - $this->startFrom();
         }
         return $this->contentsPerPage;
+    }
+
+    public function totalPages(){
+        return ceil($this->totalRecords/$this->contentsPerPage);
     }
 
 }
