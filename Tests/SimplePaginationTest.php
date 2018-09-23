@@ -36,5 +36,17 @@ class SimplePaginationTest extends PHPUnit_Framework_TestCase{
     }
 
 
+    /** @test */
+    function we_can_determine_the_total_number_of_pages(){
+
+        $simplePaginator = new SimplePaginator(83,1, 10);
+
+        $this->assertEquals(9, $simplePaginator->totalPages());
+
+        $simplePaginator2 = new SimplePaginator(24,1, 6);
+
+        $this->assertEquals(4, $simplePaginator2->totalPages());
+    }
+
 
 }
