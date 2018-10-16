@@ -13,6 +13,8 @@ pipeline:
   publish:
       image: phpunit/phpunit
       repo: chadubab/simplepaginator
+      tags: latest
+      secrets: [ docker_username, docker_password ]
 
 services:
   cache:
