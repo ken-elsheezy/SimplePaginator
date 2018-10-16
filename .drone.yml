@@ -11,7 +11,7 @@ pipeline:
       branch: staging
 
   publish:
-      image: phpunit/phpunit
+      image: plugins/docker
       repo: chadubab/simplepaginator
       tags: latest
       secrets: [ docker_username, docker_password ]
