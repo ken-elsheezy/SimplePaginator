@@ -27,6 +27,8 @@ pipeline:
     image: appleboy/drone-ssh
     host: 18.223.161.61
     username: ubuntu
-    key_path: /root/ssh/drone_rsa
+    secrets:
+        - source: deploy_key
+          target: ssh_key
     script:
       - echo "test ssh"
