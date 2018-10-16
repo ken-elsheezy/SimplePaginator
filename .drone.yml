@@ -1,0 +1,8 @@
+# configure the Drone Pipelin
+pipeline:
+  backend:
+    image: smartapp/bitbucket-pipelines-php-mysql
+    commands:
+      - vendor/bin/phpunit Tests/SimplePaginationTest.php
+
+
