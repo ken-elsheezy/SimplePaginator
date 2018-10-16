@@ -1,23 +1,34 @@
 # configure the Drone Pipelin
+#pipeline:
+  #staging-environment: #the name backend can be changed to anything
+    #image: phpunit/phpunit
+    #commands:
+      #- composer install
+      #- echo "we the best"
+      #- cat index.php
+      #- vendor/bin/phpunit Tests/SimplePaginationTest.php
+    #when:
+      #branch: staging
+
+  #publish:
+      #image: plugins/docker
+      #repo: chadubab/simplepaginator
+      #tags: latest
+      #secrets: [ docker_username, docker_password ]
+
+
+#services:
+  #cache:
+    #image: composer
+
+
 pipeline:
-  staging-environment: #the name backend can be changed to anything
-    image: phpunit/phpunit
-    commands:
-      - composer install
-      - echo "we the best"
-      - cat index.php
-      - vendor/bin/phpunit Tests/SimplePaginationTest.php
-    when:
-      branch: staging
-
-  publish:
-      image: plugins/docker
-      repo: chadubab/simplepaginator
-      tags: latest
-      secrets: [ docker_username, docker_password ]
-
-      
-
-services:
-  cache:
-    image: composer
+  ssh:
+    image: appleboy/drone-ssh
+    host: 18.223.161.61
+    username: ubuntu
+    volumes:
+      - /root/drone_rsa:/root/ssh/drone_rsa
+    key_path: /root/ssh/drone_rsa
+    script:
+      - echo "test ssh"
