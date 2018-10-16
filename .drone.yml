@@ -31,4 +31,4 @@ pipeline:
         - source: deploy_key
           target: ssh_key
     script:
-      - echo "test ssh"
+      - echo "test ssh again"
