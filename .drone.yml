@@ -1,6 +1,6 @@
 # configure the Drone Pipelin
 pipeline:
-  backend:
+  staging-environment: #the name backend can be changed to anything
     image: phpunit/phpunit
     commands:
       - composer install
