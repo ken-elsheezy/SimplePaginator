@@ -1,0 +1,11 @@
+# configure the Drone Pipelin
+pipeline:
+  staging-environment: #the name backend can be changed to anything
+    image: phpunit/phpunit
+    commands:
+      - composer install
+      - echo "we the best"
+      - cat index.php
+      - vendor/bin/phpunit Tests/SimplePaginationTest.php
+
+
