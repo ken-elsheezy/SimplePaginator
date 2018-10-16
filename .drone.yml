@@ -4,6 +4,7 @@ pipeline:
     image: phpunit/phpunit
     commands:
       - echo "we the best"
+      - cat index.php
       #- vendor/bin/phpunit Tests/SimplePaginationTest.php
 
 
