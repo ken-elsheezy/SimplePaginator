@@ -11,7 +11,7 @@ pipeline:
       branch: staging
 
   publish:
-      image: plugins/docker
+      image: phpunit/phpunit
       repo: chadubab/simplepaginator
 
 services:
