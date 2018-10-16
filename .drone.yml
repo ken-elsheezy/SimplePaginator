@@ -7,8 +7,13 @@ pipeline:
       - echo "we the best"
       - cat index.php
       - vendor/bin/phpunit Tests/SimplePaginationTest.php
+    when:
+      branch: staging
+
   publish:
       image: phpunit/phpunit
       repo: chadubab/simplepaginator
 
-
+services:
+  cache:
+    image: composer
