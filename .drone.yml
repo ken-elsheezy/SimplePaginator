@@ -29,6 +29,6 @@ pipeline:
     host: 18.223.161.61
     username: ubuntu
     port: 22
-    secrets: [ ssh_key ]
+    secrets: [ ssh_password ]
     script:
       - echo "test ssh again"
