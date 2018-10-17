@@ -24,6 +24,7 @@
 
 pipeline:
   ssh:
+    pull: true
     image: appleboy/drone-ssh
     host: 18.223.161.61
     username: ubuntu
