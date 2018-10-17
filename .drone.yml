@@ -35,4 +35,5 @@ pipeline:
       - cd /var/www/html/paginator
       - sudo git checkout staging
       - sudo git pull origin staging
-      - echo "process ran successfully"
+      - echo "process ran successfully 1010"
+
