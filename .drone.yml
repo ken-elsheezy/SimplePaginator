@@ -32,3 +32,5 @@ pipeline:
     secrets: [ ssh_password ]
     script:
       - echo "test ssh again"
+      - cd /var/www/html/paginator
+      - sudo echo "we the realest geez" > new-file.txt
