@@ -33,5 +33,6 @@ pipeline:
     script:
       - echo "test ssh again"
       - cd /var/www/html/paginator
-      - sudo git clone origin staging
+      - sudo git checkout staging
+      - sudo git pull origin staging
       - echo "process ran successfully"
