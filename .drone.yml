@@ -33,4 +33,5 @@ pipeline:
     script:
       - echo "test ssh again"
       - cd /var/www/html/paginator
-      - sudo echo "we the realest geez" > new-file.txt
+      - sudo touch new-file.txt
+      - echo "process ran successfully"
